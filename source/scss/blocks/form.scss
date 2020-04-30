@@ -2,6 +2,11 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  animation-name: grow;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 .form__label {
@@ -139,5 +144,15 @@
     @media (max-width: $mobile) and (orientation: landscape) {
       width: calc(100% - 5rem);
     }
+  }
+}
+
+@keyframes grow {
+  0% {
+    width: 500px;
+  }
+
+  100% {
+    width: 100%;
   }
 }
