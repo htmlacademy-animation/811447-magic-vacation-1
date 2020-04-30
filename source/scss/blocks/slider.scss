@@ -282,10 +282,19 @@
   animation-duration: 1.5s;
 }
 
+.swiper-slide-next .slider__item-text {
+  opacity: 0;
+  animation-name: fadeInLeft;
+  animation-timing-function: ease-out;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(100px);
   }
 
   50% {
