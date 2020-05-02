@@ -275,3 +275,19 @@
     }
   }
 }
+
+.swiper-slide-active .slider__item-text {
+  animation-name: fadeInLeft;
+  animation-timing-function: ease-out;
+  animation-duration: 1.5s;
+}
+
+.swiper-slide-next .slider__item-text {
+  opacity: 0;
+  animation-name: fadeInLeft;
+  animation-timing-function: ease-out;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+

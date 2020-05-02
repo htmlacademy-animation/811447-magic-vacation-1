@@ -35,6 +35,7 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
+    transition: 0.35s;
   }
 
   svg {
@@ -160,6 +161,23 @@
   }
 }
 
+.social-block--active .social-block__link {
+  animation-name: fadeInUp;
+  animation-fill-mode: forwards;
+
+  &--fb {
+    animation-duration: 0.5s;
+  }
+
+  &--insta {
+    animation-duration: 0.75s;
+  }
+
+  &--vk {
+    animation-duration: 1s;
+  }
+}
+
 .social-block__link {
   position: relative;
   display: block;
@@ -168,6 +186,7 @@
   color: $c-light;
   border: 2px solid transparent;
   border-radius: 50%;
+  transition: 0.35s;
 
   @media (min-width: $stop-scaling) {
     width: 40px;
