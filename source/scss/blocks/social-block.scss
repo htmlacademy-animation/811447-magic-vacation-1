@@ -161,6 +161,23 @@
   }
 }
 
+.social-block--active .social-block__link {
+  animation-name: fadeInUp;
+  animation-fill-mode: forwards;
+
+  &--fb {
+    animation-duration: 0.5s;
+  }
+
+  &--insta {
+    animation-duration: 0.75s;
+  }
+
+  &--vk {
+    animation-duration: 1s;
+  }
+}
+
 .social-block__link {
   position: relative;
   display: block;
