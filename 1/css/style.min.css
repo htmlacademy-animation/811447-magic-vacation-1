@@ -1240,7 +1240,7 @@ img {
   justify-content: flex-end;
   animation-name: grow;
   animation-timing-function: ease-out;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards; }
 
 .form__label {
@@ -1362,12 +1362,6 @@ img {
   @media (max-width: 768px) and (orientation: landscape) {
     .form--result .form__field {
       width: calc(100% - 5rem); } }
-
-@keyframes grow {
-  0% {
-    width: 500px; }
-  100% {
-    width: 100%; } }
 
 .game {
   flex-grow: 1;
@@ -1604,16 +1598,6 @@ img {
       margin: 0 0 0 -5px;
       font-size: 48px; } }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(100px); }
-  50% {
-    opacity: 0; }
-  100% {
-    transform: translateY(0);
-    opacity: 1; } }
-
 .page-header {
   position: fixed;
   top: 0;
@@ -1824,8 +1808,7 @@ img {
     position: relative;
     display: block;
     color: inherit;
-    padding: 0 0.5em 0.5em;
-    transition: 0.35s; }
+    padding: 0 0.5em 0.5em; }
     .page-header__menu a::after {
       content: "";
       position: absolute;
@@ -1833,7 +1816,7 @@ img {
       width: 0;
       height: 2px;
       background-color: #ffffff;
-      left: 0;
+      right: 0;
       opacity: 0;
       transition: 0.35s; }
       @media (min-width: 2000px) {
@@ -1858,6 +1841,8 @@ img {
       color: #a67ee5;
       outline: none; }
       .page-header__menu a:hover::after, .page-header__menu a:focus::after {
+        left: 0;
+        right: unset;
         width: 100%;
         opacity: 1;
         background-color: #a67ee5; }
@@ -3092,16 +3077,6 @@ img {
   animation-delay: 0.5s;
   animation-fill-mode: forwards; }
 
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(100px); }
-  50% {
-    opacity: 0; }
-  100% {
-    transform: translateX(0);
-    opacity: 1; } }
-
 .social-block {
   position: relative; }
   .social-block:hover .social-block__list {
@@ -3236,6 +3211,16 @@ img {
       .social-block__list li {
         margin: 0 1.25rem; } }
 
+.social-block--active .social-block__link {
+  animation-name: fadeInUp;
+  animation-fill-mode: forwards; }
+  .social-block--active .social-block__link--fb {
+    animation-duration: 0.5s; }
+  .social-block--active .social-block__link--insta {
+    animation-duration: 0.75s; }
+  .social-block--active .social-block__link--vk {
+    animation-duration: 1s; }
+
 .social-block__link {
   position: relative;
   display: block;
@@ -3294,6 +3279,32 @@ img {
       .social-block__link--vk svg {
         width: 10px;
         height: 10px; } }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); }
+  50% {
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  50% {
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes grow {
+  0% {
+    width: 500px; }
+  100% {
+    width: 100%; } }
 
 
 /*# sourceMappingURL=style.min.css.map*/
