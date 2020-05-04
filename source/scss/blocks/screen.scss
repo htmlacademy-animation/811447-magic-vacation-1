@@ -47,7 +47,7 @@
   background-color: $c-light;
   z-index: 1;
   transform: translateY(101%);
-  transition: 0.35s cubic-bezier(0, 0.69, 0.36, 0.98);
+  transition: 0.7s cubic-bezier(0, 0.8, 1, 0.99);
 
   @media (max-width: $tablet) and (orientation: portrait) {
     width: 3.5rem;
@@ -71,7 +71,7 @@
     }
   }
 
-  body.loaded & {
+  .loaded & {
     transform: translateY(0);
   }
 }
