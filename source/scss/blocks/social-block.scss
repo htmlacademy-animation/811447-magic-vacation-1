@@ -41,7 +41,6 @@
   .loaded &::before {
     animation-name: growSocialToggle;
     animation-duration: 0.7s;
-    animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0, 0.8, 1, 0.99);
   }
 
