@@ -308,7 +308,24 @@
 }
 
 .screen--prizes {
-  background-color: $c-dark;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background-color: $c-dark;
+  }
+
+  &.active::before {
+    animation-name: growHeight;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+  }
 }
 
 .screen--game {
