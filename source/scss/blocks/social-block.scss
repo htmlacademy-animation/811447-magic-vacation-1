@@ -38,6 +38,12 @@
     transition: 0.35s;
   }
 
+  .loaded &::before {
+    animation-name: growSocialToggle;
+    animation-duration: 0.7s;
+    animation-timing-function: cubic-bezier(0, 0.8, 1, 0.99);
+  }
+
   svg {
     @include center;
     display: block;
@@ -161,20 +167,13 @@
   }
 }
 
-.social-block--active .social-block__link {
+.social-block--active li {
   animation-name: fadeInUp;
   animation-fill-mode: forwards;
-
-  &--fb {
-    animation-duration: 0.5s;
-  }
-
-  &--insta {
-    animation-duration: 0.75s;
-  }
-
-  &--vk {
-    animation-duration: 1s;
+  @for $i from 1 through 3 {
+    &:nth-of-type(#{$i}) {
+      animation-duration: (0.25 + $i * 0.25) + s;
+    }
   }
 }
 
