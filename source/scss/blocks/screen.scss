@@ -308,21 +308,10 @@
 }
 
 .screen--prizes {
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 0;
-    background-color: $c-dark;
-  }
-
-  &.active::before {
-    animation-name: growHeight;
-    animation-duration: 0.7s;
+  opacity: 0;
+  .loaded &.active {
+    animation-name: fadeIn;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-timing-function: ease;
   }
@@ -330,7 +319,14 @@
 
 .screen--game {
   position: relative;
-  background-color: $c-dark;
+
+  opacity: 0;
+  .loaded &.active {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+  }
 
   &::before {
     content: "";
@@ -365,7 +361,6 @@
   left: 0;
   right: 0;
   background-color: $c-dark;
-  opacity: 0;
   pointer-events: none;
 
   &.screen--show {
@@ -375,5 +370,30 @@
 }
 
 .screen--rules {
+  opacity: 0;
+  .loaded &.active {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+  }
+}
+
+.screen--bg {
+  position: fixed;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
   background-color: $c-dark;
+
+  .screen--prizes.active ~ &,
+  .screen--rules.active ~ &,
+  .screen--game.active ~ & {
+    animation-name: growHeight;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+  }
 }

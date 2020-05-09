@@ -63,3 +63,19 @@
     height: 100%;
   }
 }
+
+@keyframes fadeIn {
+  0% {
+    // transform: translateY(1000px);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    // transform: translateY(0);
+  }
+}
