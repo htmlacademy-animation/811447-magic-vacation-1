@@ -320,14 +320,6 @@
 .screen--game {
   position: relative;
 
-  opacity: 0;
-  .loaded &.active {
-    animation-name: fadeIn;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
-  }
-
   &::before {
     content: "";
     position: absolute;
@@ -366,34 +358,5 @@
   &.screen--show {
     opacity: 1;
     pointer-events: auto;
-  }
-}
-
-.screen--rules {
-  opacity: 0;
-  .loaded &.active {
-    animation-name: fadeIn;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
-  }
-}
-
-.screen--bg {
-  position: fixed;
-  z-index: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 0;
-  background-color: $c-dark;
-
-  .screen--prizes.active ~ &,
-  .screen--rules.active ~ &,
-  .screen--game.active ~ & {
-    animation-name: growHeight;
-    animation-duration: 0.7s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
   }
 }

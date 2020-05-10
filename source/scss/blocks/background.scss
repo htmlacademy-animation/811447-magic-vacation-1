@@ -1,0 +1,21 @@
+.background {
+  position: fixed;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background-color: $c-dark;
+
+  .screen--prizes.active ~ & {
+    animation-name: growHeight;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+  }
+
+  .screen--rules.active ~ &,
+  .screen--game.active ~ & {
+    height: 100%;
+  }
+}
