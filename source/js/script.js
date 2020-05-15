@@ -10,6 +10,7 @@ import form from './modules/form.js';
 import social from './modules/social.js';
 import rules from './modules/rules.js';
 import FullPageScroll from './modules/full-page-scroll';
+import AccentTypographyBuild from './modules/accent-typography-build';
 
 // init modules
 body();
@@ -25,3 +26,8 @@ rules();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
+
+const animationTopScreenTextLine = new AccentTypographyBuild(`.text`, 1000, `active`, `transform`);
+setTimeout(()=>{
+  animationTopScreenTextLine.runAnimation();
+}, 500);
