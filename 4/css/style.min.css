@@ -2576,7 +2576,7 @@ img {
 
 .loaded .screen--rules.active .rules__item::before {
   animation-name: growRulesPoints;
-  animation-duration: 1s;
+  animation-duration: 0.75s;
   animation-timing-function: ease;
   animation-fill-mode: forwards; }
 
@@ -2587,32 +2587,32 @@ img {
   animation-fill-mode: forwards; }
 
 .loaded .screen--rules.active .rules__item:nth-of-type(1)::before {
-  animation-delay: 0s; }
+  animation-delay: 0.2s; }
 
 .loaded .screen--rules.active .rules__item:nth-of-type(2)::before {
-  animation-delay: 0.25s; }
+  animation-delay: 0.7s; }
 
 .loaded .screen--rules.active .rules__item:nth-of-type(3)::before {
-  animation-delay: 0.5s; }
+  animation-delay: 1.2s; }
 
 .loaded .screen--rules.active .rules__item:nth-of-type(4)::before {
-  animation-delay: 0.75s; }
+  animation-delay: 1.7s; }
 
 .loaded .screen--rules.active .rules__item:nth-of-type(1) p {
-  animation-delay: 0s; }
+  animation-delay: 0.2s; }
 
 .loaded .screen--rules.active .rules__item:nth-of-type(2) p {
-  animation-delay: 0.25s; }
+  animation-delay: 0.7s; }
 
 .loaded .screen--rules.active .rules__item:nth-of-type(3) p {
-  animation-delay: 0.5s; }
+  animation-delay: 1.2s; }
 
 .loaded .screen--rules.active .rules__item:nth-of-type(4) p {
-  animation-delay: 0.75s; }
+  animation-delay: 1.7s; }
 
 .loaded .screen--rules.active .rules__link--animated {
   animation-name: growRulesLink;
-  animation-duration: 1s;
+  animation-duration: 0.75s;
   animation-timing-function: ease;
   animation-fill-mode: forwards; }
 
@@ -3440,20 +3440,20 @@ img {
 @keyframes growRulesPoints {
   0% {
     transform: scale(0); }
-  50% {
+  75% {
     transform: scale(1.03); }
   100% {
     transform: scale(1); } }
 
 @keyframes growRulesLink {
   0% {
-    width: 0;
+    transform: translateX(50%) scale3d(0, 1, 1);
     color: #ffffff; }
   25% {
     opacity: 1;
     color: #ffffff; }
   100% {
-    width: auto;
+    transform: translateX(0) scale3d(1, 1, 1);
     color: #5f458c;
     opacity: 1; } }
 
