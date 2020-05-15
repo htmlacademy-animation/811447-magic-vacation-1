@@ -220,7 +220,7 @@
 .loaded .screen--rules.active {
   .rules__item::before {
     animation-name: growRulesPoints;
-    animation-duration: 1s;
+    animation-duration: 0.75s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
   }
@@ -235,20 +235,20 @@
   .rules__item {
     @for $i from 1 through 4 {
       &:nth-of-type(#{$i})::before {
-        animation-delay: ($i * 0.25 - 0.25) + s;
+        animation-delay: ($i * 0.5 - 0.3) + s;
       }
     }
 
     @for $i from 1 through 4 {
       &:nth-of-type(#{$i}) p {
-        animation-delay: ($i * 0.25 - 0.25) + s;
+        animation-delay: ($i * 0.5 - 0.3) + s;
       }
     }
   }
 
   .rules__link--animated {
       animation-name: growRulesLink;
-      animation-duration: 1s;
+      animation-duration: 0.75s;
       animation-timing-function: ease;
       animation-fill-mode: forwards;
     }
