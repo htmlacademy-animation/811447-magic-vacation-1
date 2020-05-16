@@ -36,4 +36,3 @@ const animationIntroDate = new TextAnimation(`.intro__date`, `active`);
 setTimeout(()=>{
   animationIntroDate.runAnimation();
 }, 1800);
-
