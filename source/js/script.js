@@ -10,7 +10,7 @@ import form from './modules/form.js';
 import social from './modules/social.js';
 import rules from './modules/rules.js';
 import FullPageScroll from './modules/full-page-scroll';
-import AccentTypographyBuild from './modules/accent-typography-build';
+import TextAnimation from './modules/text-animation';
 
 // init modules
 body();
@@ -27,7 +27,13 @@ rules();
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
 
-const animationTopScreenTextLine = new AccentTypographyBuild(`.text`, 1000, `active`, `transform`);
+const animationIntroTitle = new TextAnimation(`.intro__title`, `active`);
 setTimeout(()=>{
-  animationTopScreenTextLine.runAnimation();
+  animationIntroTitle.runAnimation();
 }, 500);
+
+const animationIntroDate = new TextAnimation(`.intro__date`, `active`);
+setTimeout(()=>{
+  animationIntroDate.runAnimation();
+}, 1800);
+

@@ -1,26 +1,19 @@
-export default class AccentTypographyBuild {
+export default class TextAnimation {
   constructor(
       elementSelector,
-      timer,
       classForActivate,
-      property
   ) {
     this._TIME_SPACE = 100;
 
     this._elementSelector = elementSelector;
-    this._timer = timer;
     this._classForActivate = classForActivate;
-    this._property = property;
     this._element = document.querySelector(this._elementSelector);
-    this._timeOffset = 0;
     this.prePareText();
   }
 
   createElement(letter) {
     const span = document.createElement(`span`);
     span.textContent = letter;
-    span.style.transition = `${this._property} ${this._timer}ms ease ${this._timeOffset}ms`;
-    this._timeOffset += 20;
     return span;
   }
 
