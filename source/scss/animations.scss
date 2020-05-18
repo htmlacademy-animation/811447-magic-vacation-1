@@ -109,3 +109,35 @@
     opacity: 1;
   }
 }
+
+@keyframes fadeInRollRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px) rotate(-270deg);
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0) rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRollLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(200px) rotate(270deg);
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0) rotate(0);
+    opacity: 1;
+  }
+}

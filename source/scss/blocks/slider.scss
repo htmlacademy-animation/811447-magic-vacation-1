@@ -161,6 +161,28 @@
     height: 40px;
   }
 
+  &--next {
+    transform: translateX(100px);
+  }
+
+  .screen--story.active &--next {
+    animation-name: fadeInLeft;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 0, 0.6, 1.25);
+    animation-fill-mode: forwards;
+  }
+
+  &--prev {
+    transform: translateX(-100px);
+  }
+
+  .screen--story.active &--prev {
+    animation-name: fadeInRollRight;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0, 0, 0.6, 1.25);
+    animation-fill-mode: forwards;
+  }
+
   &::before {
     @include center;
     content: "";
