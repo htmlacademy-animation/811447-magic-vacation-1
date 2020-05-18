@@ -35,11 +35,13 @@
   padding: 1rem 0;
   width: 10rem;
   color: $c-light;
+  opacity: 0;
   transform: translateX(-20px);
   transition: 0.7s cubic-bezier(0, 0.8, 1, 0.99);
 
   .loaded & {
     transform: translateX(0);
+    opacity: 1;
   }
 
   @media (min-width: $stop-scaling) {

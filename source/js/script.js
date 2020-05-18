@@ -10,6 +10,7 @@ import form from './modules/form.js';
 import social from './modules/social.js';
 import rules from './modules/rules.js';
 import FullPageScroll from './modules/full-page-scroll';
+import TextAnimation from './modules/text-animation';
 
 // init modules
 body();
@@ -25,3 +26,13 @@ rules();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
+
+const animationIntroTitle = new TextAnimation(`.intro__title`, `active`);
+setTimeout(()=>{
+  animationIntroTitle.runAnimation();
+}, 500);
+
+const animationIntroDate = new TextAnimation(`.intro__date`, `active`);
+setTimeout(()=>{
+  animationIntroDate.runAnimation();
+}, 1800);
