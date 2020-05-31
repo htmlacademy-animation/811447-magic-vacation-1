@@ -9,6 +9,7 @@ import result from './modules/result.js';
 import form from './modules/form.js';
 import social from './modules/social.js';
 import rules from './modules/rules.js';
+import prizes from './modules/prizes.js';
 import FullPageScroll from './modules/full-page-scroll';
 import TextAnimation from './modules/text-animation';
 
@@ -23,6 +24,7 @@ result();
 form();
 social();
 rules();
+prizes();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
