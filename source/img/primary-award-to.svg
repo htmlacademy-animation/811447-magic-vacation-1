@@ -42,33 +42,34 @@
   <!-- плоские горы -->
   <line x1="17.55" y1="224.1" x2="241.04" y2="224.1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
 
-  <defs>
+  <!-- <defs>
     <clipPath id="window" transform="translate(0 -70)">
       <path d="M275,225.43H257.87a17.6,17.6,0,0,1-17.52-17.58V170a17.6,17.6,0,0,1,17.52-17.58H275A17.6,17.6,0,0,1,292.51,170v37.83A17.61,17.61,0,0,1,275,225.43Z" transform="translate(-54.48 -104.9)">
 
       </path>
     </clipPath>
-  </defs>
-  <!-- <mask id="window" fill="#fff">
-    <path d="M35.52,73.53 L18.39,73.53 C8.70884274,73.4860004 0.880901443,65.6312511 0.87,55.95 L0.87,18.1 C0.880901443,8.41874889 8.70884274,0.563999577 18.39,0.52 L35.52,0.52 C45.1972491,0.569480474 53.0191295,8.42263053 53.03,18.1 L53.03,55.93 C53.0246576,65.6129146 45.20276,73.4750161 35.52,73.53 " >
-
+  </defs> -->
+  <mask id="window" fill="#fff">
+    <path d="M35.52,73.53 L18.39,73.53 C8.70884274,73.4860004 0.880901443,65.6312511 0.87,55.95 L0.87,18.1 C0.880901443,8.41874889 8.70884274,0.563999577 18.39,0.52 L35.52,0.52 C45.1972491,0.569480474 53.0191295,8.42263053 53.03,18.1 L53.03,55.93 C53.0246576,65.6129146 45.20276,73.4750161 35.52,73.53" transform="translate(185 50)">
     </path>
-  </mask> -->
-  <g >
+  </mask>
+
+  <g mask="url(#window)" >
     <g id="clouds" transform="translate(300 60)">
-    <line x1="28.18" y1="38.34" x2="91.09" y2="38.34" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
-    <path d="M41.77,97.54H77.06a12.4,12.4,0,1,1,24.8,0h17.93" transform="translate(-40.77 -69.46)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
-    <line x1="218.19" y1="23.72" x2="257.97" y2="23.72" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
-    <path d="M278.75,82.91H251.39a12.4,12.4,0,1,0-24.8,0H208.65" transform="translate(-40.77 -69.46)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
-    <line x1="246.24" y1="13.45" x2="268.43" y2="13.45" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
-    <animateTransform
-      attributeName="transform"
-      type="translate"
-      from="300 60"
-      to="-100 60"
-      dur="4s"
-      repeatCount="indefinite"
-    />
+      <line x1="28.18" y1="38.34" x2="91.09" y2="38.34" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+      <path d="M41.77,97.54H77.06a12.4,12.4,0,1,1,24.8,0h17.93" transform="translate(-40.77 -69.46)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
+      <line x1="218.19" y1="23.72" x2="257.97" y2="23.72" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
+      <path d="M278.75,82.91H251.39a12.4,12.4,0,1,0-24.8,0H208.65" transform="translate(-40.77 -69.46)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
+      <line x1="246.24" y1="13.45" x2="268.43" y2="13.45" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        from="300 60"
+        to="-100 60"
+        dur="4s"
+        repeatCount="indefinite"
+      />
     </g>
   </g>
 </svg>
+
