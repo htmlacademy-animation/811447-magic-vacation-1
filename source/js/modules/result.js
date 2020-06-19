@@ -29,4 +29,25 @@ export default () => {
       });
     }
   }
+
+  const resultTitles = document.querySelectorAll(`.result__title svg`);
+
+  resultTitles.forEach((title) => {
+    title.addEventListener(`animationstart`, () => {
+
+      const paths = title.querySelectorAll(`path`);
+      paths.forEach((path) => {
+        const animation = path.querySelector(`.dasharray-animation`);
+
+        const pathLength = path.getTotalLength();
+        path.setAttribute(`stroke-dasharray`, `0 0`);
+
+        if (animation) {
+          animation.setAttribute(`from`, `0 ${pathLength * 0.5}`);
+          animation.setAttribute(`to`, `${pathLength * 0.5} 0`);
+        }    
+      })
+    });
+  })
+  
 };
