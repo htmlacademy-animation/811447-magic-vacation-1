@@ -13,6 +13,23 @@ export default () => {
           return el.getAttribute(`id`) === target;
         });
         targetEl[0].classList.add(`screen--show`);
+        const resultTitle = targetEl[0].querySelector(`.result__title`);
+        const svg = resultTitle.querySelector(`.svg-animation`);
+        const svgClone = svg.cloneNode(true);
+        svg.remove();
+        resultTitle.appendChild(svgClone);
+        const paths = svgClone.querySelectorAll(`path`);
+        paths.forEach((path) => {
+          const animation = path.querySelector(`.dasharray-animation`);
+
+          const pathLength = path.getTotalLength();
+          path.setAttribute(`stroke-dasharray`, `0 ${pathLength * 0.5}`);
+
+          if (animation) {
+            animation.setAttribute(`from`, `0 ${pathLength * 0.5}`);
+            animation.setAttribute(`to`, `${pathLength * 0.5} 0`);
+          }
+        });
         targetEl[0].classList.remove(`screen--hidden`);
       });
     }
@@ -29,25 +46,4 @@ export default () => {
       });
     }
   }
-
-  const resultTitles = document.querySelectorAll(`.result__title svg`);
-
-  resultTitles.forEach((title) => {
-    title.addEventListener(`animationstart`, () => {
-
-      const paths = title.querySelectorAll(`path`);
-      paths.forEach((path) => {
-        const animation = path.querySelector(`.dasharray-animation`);
-
-        const pathLength = path.getTotalLength();
-        path.setAttribute(`stroke-dasharray`, `0 0`);
-
-        if (animation) {
-          animation.setAttribute(`from`, `0 ${pathLength * 0.5}`);
-          animation.setAttribute(`to`, `${pathLength * 0.5} 0`);
-        }    
-      })
-    });
-  })
-  
 };

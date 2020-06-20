@@ -360,8 +360,9 @@
     pointer-events: auto;
   }
 
-  &.screen--show svg,
+  &.screen--show .svg-animation,
   &.screen--show .result__text {
+    opacity: 1;
     animation-name: shrinkResultTitle;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
