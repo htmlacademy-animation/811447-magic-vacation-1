@@ -1,5 +1,5 @@
 import throttle from 'lodash/throttle';
-import Timer from './timer';
+import {timer} from './timer';
 
 export default class FullPageScroll {
   constructor() {
@@ -44,16 +44,17 @@ export default class FullPageScroll {
     this.screenElements.forEach((screen) => {
       screen.classList.add(`screen--hidden`);
       screen.classList.remove(`active`);
+      if (screen.classList.contains(`screen--game`)) {
+        screen.querySelector(`.game__counter`).innerHTML = `<span>05</span>:<span>00</span>`;
+        timer.init();
+      }
     });
     this.screenElements[this.activeScreen].classList.remove(`screen--hidden`);
     this.screenElements[this.activeScreen].classList.add(`active`);
-    if(this.screenElements[this.activeScreen].classList.contains(`screen--game`)) {
-      const timer = new Timer(5);
-      console.log(timer)
 
-      timer.cancel();
+    if (this.screenElements[this.activeScreen].classList.contains(`screen--game`)) {
       timer.init();
-    };
+    }
   }
 
   changeActiveMenuItem() {
