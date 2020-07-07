@@ -163,9 +163,13 @@
   }
 
   .active &--journeys {
-    animation-name: movePrizeJourney;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
+    transform: translateX(0);
+
+    @media(min-width: $tablet) {
+      animation-name: movePrizeJourney;
+      animation-duration: 5s;
+      animation-fill-mode: forwards;
+    }
 
     .prizes__desc {
       animation-name: fadeIn;
@@ -210,6 +214,10 @@
         width: 7rem;
       }
     }
+
+    .prizes__desc b {
+      opacity: 0;
+    }
   }
 
   .active &--cases {
@@ -219,10 +227,30 @@
     animation-fill-mode: forwards;
   }
 
+  .active &--cases .prizes__desc span {
+    opacity: 0;
+    animation-name: fadeInLeft;
+    animation-delay: 6s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
   &--codes {
     opacity: 0;
+    min-width: 26%;
     @media (max-width: $tablet) and (orientation: portrait) {
       padding-left: 0.8rem;
+    }
+
+    .prizes__desc b {
+      width: 60%;
+      flex-shrink: 0;
+      opacity: 0;
+    }
+
+    .prizes__desc span {
+      width: 40%;
+      flex-shrink: 0;
     }
 
     .prizes__icon {
@@ -249,6 +277,14 @@
   .active &--codes {
     animation-name: fadeIn;
     animation-delay: 6.5s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  .active &--codes .prizes__desc span {
+    opacity: 0;
+    animation-name: fadeInLeft;
+    animation-delay: 8.5s;
     animation-duration: 1s;
     animation-fill-mode: forwards;
   }
@@ -302,6 +338,8 @@
     font-weight: 400;
     font-size: 12rem;
     line-height: 0.55;
+    width: 70px;
+    text-align: right;
 
     @media (min-width: $stop-scaling) {
       font-size: 120px;
@@ -314,6 +352,10 @@
 
     @media (max-width: $tablet) and (orientation: landscape) {
       font-size: 6rem;
+    }
+
+    @media (max-width: $mobile) {
+      width: auto;
     }
 
     @media (max-width: $mobile) and (orientation: landscape) {
