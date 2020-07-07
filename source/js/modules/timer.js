@@ -1,14 +1,13 @@
 const drawTime = (container, minutes, seconds) => {
   container.innerHTML = `<span>${minutes}</span>:<span>${seconds}</span>`;
-}
+};
 
 export {drawTime};
 
 export default class Timer {
-  constructor(timeInMinutes, timerContainer, drawTime) {
-    /// this.timer = document.querySelector(`.game__counter`);
+  constructor(timeInMinutes, timerContainer, draw) {
     this.timer = timerContainer;
-    this.drawTime = drawTime;
+    this.drawTime = draw;
     this.timeInMinutes = timeInMinutes;
     this.timeInSeconds = this.timeInMinutes * 60;
     this.interval = 1000;
@@ -26,10 +25,10 @@ export default class Timer {
     const timeToEnd = this.timeInSeconds - Math.floor((Date.now() - this.start) / 1000);
     const minutes = `0${Math.floor(timeToEnd / 60)}`.slice(-2);
     const seconds = `0${Math.floor(timeToEnd % 60)}`.slice(-2);
-    // this.timer.innerHTML = `<span>${minutes}</span>:<span>${seconds}</span>`;
     this.drawTime(this.timer, minutes, seconds);
     if (timeToEnd <= 0) {
       cancelAnimationFrame(this.requestId);
+      this.drawTime(this.timer, `00`, `00`);
     }
   }
 

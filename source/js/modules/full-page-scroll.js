@@ -47,7 +47,7 @@ export default class FullPageScroll {
       screen.classList.add(`screen--hidden`);
       screen.classList.remove(`active`);
       if (screen.classList.contains(`screen--game`)) {
-        screen.querySelector(`.game__counter`).innerHTML = `<span>05</span>:<span>00</span>`;
+        drawTime(screen.querySelector(`.game__counter`), `05`, `00`);
         timer.init();
       }
     });
