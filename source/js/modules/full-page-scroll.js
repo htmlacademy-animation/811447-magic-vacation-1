@@ -1,5 +1,7 @@
 import throttle from 'lodash/throttle';
-import {timer} from './timer';
+import Timer, {drawTime} from './timer';
+
+const timer = new Timer(5, document.querySelector(`.game__counter`), drawTime);
 
 export default class FullPageScroll {
   constructor() {
