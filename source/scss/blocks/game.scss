@@ -78,23 +78,27 @@
   font-size: 4.8rem;
   line-height: 0.906;
   letter-spacing: 0;
+  text-align: left;
+  width: 150px;
 
   @media (min-width: $stop-scaling) {
     font-size: 48px;
   }
 
   @media (min-width: $tablet) {
-    margin-right: 5.6rem;
+    //margin-right: 5.6rem;
   }
 
   @media (max-width: $tablet) and (orientation: portrait) {
     margin-bottom: 1.8rem;
     font-size: 3.6rem;
+    width: 200px;
   }
 
   @media (max-width: $tablet) and (orientation: landscape) {
     font-size: 3rem;
     margin-bottom: 2rem;
+    width: 200px;
   }
 
   @media (max-width: $mobile) and (orientation: landscape) {
