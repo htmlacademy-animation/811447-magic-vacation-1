@@ -64,13 +64,21 @@ export default () => {
       width: 120,
       height: 120
     },
+    tree: {
+      width: 38,
+      height: 101
+    },
+    tree2: {
+      width: 50,
+      height: 159
+    }
   };
 
 
   function drawSeeCalf() {
-    const backCanvas = document.querySelector(`canvas#back`);
-    if (backCanvas.getContext) {
-      const backContext = backCanvas.getContext(`2d`);
+    const canvas = document.querySelector(`#sea-calf`);
+    if (canvas.getContext) {
+      const backContext = canvas.getContext(`2d`);
 
       let backOpacity = 0;
       let backScale = 0;
@@ -79,8 +87,8 @@ export default () => {
       const drawBackCanvas = () => {
         let windowWidth = window.innerWidth;
         let windowHeight = window.innerHeight;
-        backCanvas.width = windowWidth;
-        backCanvas.height = windowHeight;
+        canvas.width = windowWidth;
+        canvas.height = windowHeight;
         backContext.globalAlpha = backOpacity;
         backContext.clearRect(0, 0, windowWidth, windowHeight);
         backContext.save();
