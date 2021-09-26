@@ -1,6 +1,9 @@
+import Scene2DSeaCalf from '../canvas/scene-2d-sea-calf.js';
 
-// import {runSerial} from "../helpers/run-serial.js";
-import {drawSeeCalf} from "../canvas/primary-result.js";
+const createSceneSeaCalf = () => {
+  const scene = new Scene2DSeaCalf();
+  return scene;
+};
 
 export default () => {
   let showResultEls = document.querySelectorAll(`.js-show-result`);
@@ -18,7 +21,7 @@ export default () => {
         });
         targetEl[0].classList.add(`screen--show`);
         if (i === 0) {
-          drawSeeCalf();
+          createSceneSeaCalf();
         }
         const resultTitle = targetEl[0].querySelector(`.result__title`);
         const svg = resultTitle.querySelector(`.svg-animation`);
