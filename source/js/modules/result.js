@@ -1,3 +1,10 @@
+import Scene2DSeaCalf from '../canvas/scene-2d-sea-calf.js';
+
+const createSceneSeaCalf = () => {
+  const scene = new Scene2DSeaCalf();
+  return scene;
+};
+
 export default () => {
   let showResultEls = document.querySelectorAll(`.js-show-result`);
   let results = document.querySelectorAll(`.screen--result`);
@@ -13,6 +20,9 @@ export default () => {
           return el.getAttribute(`id`) === target;
         });
         targetEl[0].classList.add(`screen--show`);
+        if (i === 0) {
+          createSceneSeaCalf();
+        }
         const resultTitle = targetEl[0].querySelector(`.result__title`);
         const svg = resultTitle.querySelector(`.svg-animation`);
         const svgClone = svg.cloneNode(true);

@@ -11,27 +11,28 @@
 }
 
 .text__word > span {
-    padding: 10px 0 0 0;
-    transform: translate3d(0, 1.2em, 0);
-    display: inline-block;
+  padding: 10px 0 0 0;
+  transform: translate3d(0, 1.2em, 0);
+  display: inline-block;
 }
 
 .text.active .text__word > span {
-    transform: translate3d(0, 0, 0);
-    @for $i from 0 through 100 {
-      &:nth-of-type(#{$i * 6 + 1}),
-      &:nth-of-type(#{$i * 6 + 3}) {
-        transition: 1s ease;
-      }
+  transform: translate3d(0, 0, 0);
 
-      &:nth-of-type(#{$i * 6 + 2}),
-      &:nth-of-type(#{$i * 6 + 4}) {
-        transition: 1s ease 0.25s;
-      }
-
-      &:nth-of-type(#{$i * 6 + 6}),
-      &:nth-of-type(#{$i * 6 + 5}) {
-        transition: 1s ease 0.5s;
-      }
+  @for $i from 0 through 100 {
+    &:nth-of-type(#{$i * 6 + 1}),
+    &:nth-of-type(#{$i * 6 + 3}) {
+      transition: 1s ease;
     }
+
+    &:nth-of-type(#{$i * 6 + 2}),
+    &:nth-of-type(#{$i * 6 + 4}) {
+      transition: 1s ease 0.25s;
+    }
+
+    &:nth-of-type(#{$i * 6 + 6}),
+    &:nth-of-type(#{$i * 6 + 5}) {
+      transition: 1s ease 0.5s;
+    }
+  }
 }
